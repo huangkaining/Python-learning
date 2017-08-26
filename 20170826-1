@@ -1,0 +1,15 @@
+# -*- coding: utf-8 -*-
+from functools import reduce
+#将不规范的名字传唤为规范的名字
+def normalize(name):
+    return name[:1].upper()+name[1:].lower()
+#l1 = ['adam','LISA','barT']
+l1 = []
+n = int(input("n\n"))
+i=1
+while i<=n:
+    p = input()
+    l1.append(p)
+    i+=1
+l2 = list(map(normalize,l1))
+print(l2)
