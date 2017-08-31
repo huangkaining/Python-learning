@@ -1,0 +1,22 @@
+# -*- coding: utf-8 -*-
+def odd_iter():
+    n = 1
+    while True:
+        n = n + 2
+        yield n
+def del_not(n):
+    return lambda x: x % n > 0
+def primes():
+    yield 2
+    myiter = odd_iter()
+    while True:
+        n = next(myiter)
+        yield n
+        myiter = filter(del_not(n), myiter)
+n = int (input("intput n\n"))
+for i in primes():
+    if i <  n:
+        print(i)
+    else :
+        break
+
