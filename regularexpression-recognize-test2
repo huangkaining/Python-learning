@@ -1,0 +1,8 @@
+import re
+#判断输入是否为一个合法的邮箱,如果合法则输出邮箱名字和网站
+email = input("请输入你的邮箱\n")
+if re.match(r'[0-9a-zA-Z]+@[0-9a-zA-Z]+.com',email):
+    m = re.match(r'([0-9a-zA-Z]+)@([0-9a-zA-Z]+).com',email)
+    print('name is %s ,email is %s'%(m.group(1),m.group(2)))
+else :
+    print('input is invaild!')

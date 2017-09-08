@@ -1,0 +1,7 @@
+import re
+#判断输入是否为一个合法的邮箱地址
+x = input("请输入字符串\n")
+if re.match(r'[0-9a-zA-Z]+@[0-9a-zA-Z]+.com',x):
+    print('yes')
+else :
+    print('no')
